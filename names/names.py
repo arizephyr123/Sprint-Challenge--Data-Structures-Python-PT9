@@ -11,6 +11,7 @@ print('number in names_1', len(names_1))
 f = open('names_2.txt', 'r')
 names_2 = f.read().split("\n")  # List containing 10000 names
 f.close()
+print('number in names_2', len(names_2))
 
 duplicates = []  # Return the list of duplicates in this data structure
 
@@ -20,10 +21,12 @@ duplicates = []  # Return the list of duplicates in this data structure
 #         if name_1 == name_2:
 #             duplicates.append(name_1)
 
-bst = BinarySearchTree(None)
+
+bst = BinarySearchTree('')
+
 for name_1 in names_1:
     bst.insert(name_1)
-print("number in bst", bst)
+print("number in bst", bst.length)
 
 for name_2 in names_2:
     if bst.contains(name_2):
